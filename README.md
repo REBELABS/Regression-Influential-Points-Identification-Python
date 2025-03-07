@@ -54,8 +54,21 @@ Ensure you have **Python 3+** installed, then install the required dependencies 
 ```bash
 pip install pandas scipy
 ```
+2. Alternative: Clone from GitHub
+If you want to view or modify the source code, you can clone it:
+```bash
+   git clone https://github.com/REBELABS/Regression-Influential-Points-Identification-Python.git
+cd Regression-Influential-Points-Identification-Python
+python setup.py install
+```
+3. Install via PyPI
+   You can install this package directly from PyPI:
+```bash
+   pip install influential_points
+```
 ---
 ## 📌 How to Use
+**Method 1: Run script directly**
 1. Run the script:
    ```bash
    python script.py
@@ -66,7 +79,35 @@ pip install pandas scipy
    - **d**: Number of independent variables (excluding the intercept).
 3. **Provide a CSV file** containing Cook’s Distance and Leverage values.
 4. The script **automatically identifies and displays influential data points**.
+
+**Method 2: Importing as a Python Module**
+1. After installing via *pip install influential_points*, you can import and use it in your scripts:
+   ```bash
+   from influential_points import calculate_influential_cutoffs
+   #Usage Example
+   cutoffs = calculate_influential_cutoffs(n=100, p=5)
+   print("Influential Point Cutoffs:", cutoffs)
+   ```
+
+**Method 3: Using the GitHub Version**
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/REBELABS/Regression-Influential-Points-Identification-Python.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Regression-Influential-Points-Identification-Python
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the script:
+   ```bash
+   python influential_points.py
+   ```
 ---
+
 ## 📌 Example Output
 ```
  **Influential Data Points**
